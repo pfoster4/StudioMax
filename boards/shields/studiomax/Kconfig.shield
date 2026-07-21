@@ -1,0 +1,5 @@
+config SHIELD_STUDIOMAX_LEFT
+    def_bool $(shields_list_contains,studiomax_left)
+
+config SHIELD_STUDIOMAX_RIGHT
+    def_bool $(shields_list_contains,studiomax_right)
