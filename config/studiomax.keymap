@@ -1,6 +1,67 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
+#include <behaviors.dtsi>
+
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/led/led.h>
+
+&mt {
+    tapping-term-ms = <250>;
+    flavor = "tap-preferred";
+};
+
+// pin control for spi3
+// - MOSI on D13
+&pinctrl {
+    /* configuration for spi3 device, default state */
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 1, 1)>;
+        };
+    };
+    /* configuration for spi3 device, sleep state */
+    spi3_sleep: spi3_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 1, 1)>;
+            low-power-enable;
+        };
+    };
+};
+&spi3 {
+  compatible = "nordic,nrf-spim";
+  status = "okay";
+  pinctrl-0 = <&spi3_default>;
+  pinctrl-1 = <&spi3_sleep>;
+  pinctrl-names = "default", "sleep";
+};
+
+// devices on spi3
+
+#include <dt-bindings/led/led.h>
+&spi3 {
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+
+        chain-length = <19>;
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+        color-mapping = <LED_COLOR_ID_GREEN
+                         LED_COLOR_ID_RED
+                         LED_COLOR_ID_BLUE>;
+    };
+};
+/ {
+    chosen {
+        zmk,underglow = &led_strip;
+    };
+};
 / {
     keymap {
         compatible = "zmk,keymap";
