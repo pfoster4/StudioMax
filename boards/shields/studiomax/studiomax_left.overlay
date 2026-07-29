@@ -7,12 +7,12 @@
         wakeup-source;
 
         col-gpios
-            = <&shifter0 2 GPIO_ACTIVE_HIGH>
+            = <&shifter0 1 GPIO_ACTIVE_HIGH>
+            , <&shifter0 2 GPIO_ACTIVE_HIGH>
             , <&shifter0 3 GPIO_ACTIVE_HIGH>
             , <&shifter0 4 GPIO_ACTIVE_HIGH>
             , <&shifter0 5 GPIO_ACTIVE_HIGH>
             , <&shifter0 6 GPIO_ACTIVE_HIGH>
-            , <&shifter0 1 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
@@ -39,13 +39,13 @@
     status = "okay";
 };
 &encoder_left2 {
-    a-gpios = <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    a-gpios = <&xiao_d 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&xiao_d 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     status = "okay";
 };
 &encoder_left3 {
-    a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    a-gpios = <&xiao_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&xiao_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     status = "okay";
 };
 
