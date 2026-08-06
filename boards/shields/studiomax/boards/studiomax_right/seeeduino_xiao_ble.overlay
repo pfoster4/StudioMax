@@ -50,6 +50,43 @@
     };
 };
 
+// pin control for spi2
+// - SCK on D8
+// - MOSI on D10
+&pinctrl {
+    /* configuration for spi2 device, default state */
+    spi2_default: spi2_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>;
+        };
+    };
+    /* configuration for spi2 device, sleep state */
+    spi2_sleep: spi2_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>;
+            low-power-enable;
+        };
+    };
+};
+&spi2 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    pinctrl-0 = <&spi2_default>;
+    pinctrl-1 = <&spi2_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+
+// devices on spi2
+
+// CS pins for devices on spi2
+&spi2 {
+    cs-gpios = <&xiao_d 9 GPIO_ACTIVE_HIGH>;
+};
+
+nice_view_spi: &spi2 { };
+
 // pin control for spi3
 // - MOSI on D13
 &pinctrl {
@@ -97,40 +134,3 @@
         zmk,underglow = &led_strip;
     };
 };
-
-// pin control for spi2
-// - SCK on D8
-// - MOSI on D10
-&pinctrl {
-    /* configuration for spi2 device, default state */
-    spi2_default: spi2_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                    <NRF_PSEL(SPIM_MOSI, 1, 15)>;
-        };
-    };
-    /* configuration for spi2 device, sleep state */
-    spi2_sleep: spi2_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                    <NRF_PSEL(SPIM_MOSI, 1, 15)>;
-            low-power-enable;
-        };
-    };
-};
-&spi2 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    pinctrl-0 = <&spi2_default>;
-    pinctrl-1 = <&spi2_sleep>;
-    pinctrl-names = "default", "sleep";
-};
-
-// devices on spi2
-
-// CS pins for devices on spi2
-&spi2 {
-    cs-gpios = <&xiao_d 9 GPIO_ACTIVE_HIGH>;
-};
-
-nice_view_spi: &spi2 { };
