@@ -15,7 +15,7 @@
     flavor = "tap-preferred";
 };
 
-// pin control for spi3
+// pin control for spi3 change
 // - MOSI on D13
 &pinctrl {
     /* configuration for spi3 device, default state */
