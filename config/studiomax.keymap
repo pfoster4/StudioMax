@@ -506,43 +506,10 @@
          bindings = <&macro_press>,<&kp LEFT_WIN>,<&macro_tap>,<&kp NUMBER_1>,<&macro_release>,<&kp LEFT_WIN>;
          label = "TASKBAR_1";
          wait-ms = <50>;
-         tap-ms = <50>;};
+         tap-ms = <50>;
+        };
+    };
 
-
-
-/ {
-    
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
-
-macros {};
 keymap {
         compatible = "zmk,keymap";
 
