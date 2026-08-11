@@ -516,12 +516,12 @@ keymap {
         Base {
             display-name = "Base";
             bindings = <
-&kp Q  &kp W  &kp E         &kp D      &kp T  &kp NUMBER_1  &kp NUMBER_5  &kp H  &kp U      &kp I          &kp O       &kp P
-&kp A  &kp S  &kp D         &kp F      &kp G  &kp NUMBER_2  &kp NUMBER_6  &kp N  &kp J      &kp K          &kp L       &kp SQT
+&kp Q  &kp W  &kp E         &kp R      &kp T  &kp NUMBER_1  &kp NUMBER_5  &kp Y  &kp U      &kp I          &kp O       &kp P
+&kp A  &kp S  &kp D         &kp F      &kp G  &kp NUMBER_2  &kp NUMBER_6  &kp H  &kp J      &kp K          &kp L       &kp SQT
 &kp Z  &kp X  &kp C         &kp V      &kp B  &kp NUMBER_3  &kp NUMBER_7  &kp N  &kp M      &kp COMMA      &kp PERIOD  &kp SLASH
               &lt 2 ESCAPE  &kp ENTER  &mo 1  &kp NUMBER_4  &kp NUMBER_8  &mo 2  &kp SPACE  &kp BACKSPACE
 >;
-            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp C D &inc_dec_kp E F &inc_dec_kp G H &inc_dec_kp I J &inc_dec_kp K L &inc_dec_kp M N &inc_dec_kp O P>;
+            sensor-bindings = <&inc_dec_kp A B &inc_dec_msc SCRL_DOWN SCRL_UP &inc_dec_kp RIGHT LEFT &inc_dec_kp BACKSPACE DELETE &inc_dec_kp I J &inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp DOWN UP &inc_dec_kp BACKSPACE DELETE>;
         };Numbers {
          bindings = <
 &kp PG_UP  &kp HOME  &kp UP           &kp END    &kp LC(V)  &none  &none  &kp LBKT       &kp N7        &kp N8      &kp N9  &kp RBKT
