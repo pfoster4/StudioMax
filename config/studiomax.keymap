@@ -521,7 +521,7 @@ keymap {
 &kp Z  &kp X  &kp C         &kp V      &kp B  &kp NUMBER_3  &kp NUMBER_7  &kp N  &kp M      &kp COMMA      &kp PERIOD  &kp SLASH
               &lt 2 ESCAPE  &kp ENTER  &mo 1  &kp NUMBER_4  &kp NUMBER_8  &mo 2  &kp SPACE  &kp BACKSPACE
 >;
-            sensor-bindings = <&inc_dec_kp A B &inc_dec_msc SCRL_DOWN SCRL_UP &inc_dec_kp RIGHT LEFT &inc_dec_kp BACKSPACE DELETE &inc_dec_kp I J &inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp DOWN UP &inc_dec_kp BACKSPACE DELETE>;
+            sensor-bindings = <&inc_dec_kp A B &inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT &inc_dec_kp BACKSPACE DELETE &inc_dec_kp I J &inc_dec_kp UP DOWN &inc_dec_kp DOWN UP &inc_dec_kp BACKSPACE DELETE>;
         };Numbers {
          bindings = <
 &kp PG_UP  &kp HOME  &kp UP           &kp END    &kp LC(V)  &none  &none  &kp LBKT       &kp N7        &kp N8      &kp N9  &kp RBKT
