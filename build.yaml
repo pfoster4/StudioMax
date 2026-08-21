@@ -21,7 +21,7 @@
 include:
 
   - board: seeeduino_xiao_ble
-    shield: studiomax_left nice_view
+    shield: studiomax_left nice_view_adapter nice_view_gem #updated entry
 
 ## To build with ZMK Studio support, uncomment the following block
 ## by removing the leading '#' from each line.
@@ -33,7 +33,7 @@ include:
 #    artifact-name: studiomax_left_with_studio
 
   - board: seeeduino_xiao_ble
-    shield: studiomax_right nice_view
+    shield: studiomax_right nice_view_adapter nice_view_gem #updated entry
 
   - board: seeeduino_xiao_ble
     shield: settings_reset
