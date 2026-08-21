@@ -523,33 +523,37 @@ keymap {
 >;
             sensor-bindings = <&inc_dec_kp A B &inc_dec_kp PG_DOWN PG_UP &inc_dec_kp RIGHT LEFT &inc_dec_kp BACKSPACE DELETE &inc_dec_kp I J &inc_dec_kp UP DOWN &inc_dec_kp DOWN UP &inc_dec_kp BACKSPACE DELETE>;
         };Numbers {
-         display-name = "Numbers";
          bindings = <
 &kp PG_UP  &kp HOME  &kp UP           &kp END    &kp LC(V)  &none  &none  &kp LBKT       &kp N7        &kp N8      &kp N9  &kp RBKT
 &kp PG_DN  &kp LEFT  &kp DOWN         &kp RIGHT  &kp LC(X)  &none  &none  &kp EQUAL      &kp N4        &kp N5      &kp N6  &kp SEMI
 &kp LALT   &none     &Brackets_macro  &kp LG(V)  &kp LC(C)  &none  &none  &kp BSLH       &kp N1        &kp N2      &kp N3  &kp GRAVE
                      &none            &none      &none      &none  &none  &kp BACKSPACE  &kp NUMBER_0  &kp PERIOD
->;};Symbols {
-            display-name = "Symbols";
+            >;
+            label = "Numbers";
+};Symbols {
          bindings = <
 &none  &none            &MoveUp_macro    &none                 &none  &none  &none  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
 &none  &MoveLeft_macro  &MoveDown_macro  &MoveRight_macro      &none  &none  &none  &kp PLUS        &kp DOLLAR       &kp PERCENT   &kp CARET             &kp COLON
 &none  &none            &none            &TextExtractor_macro  &none  &none  &none  &kp PIPE        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp TILDE
                         &none            &none                 &none  &none  &none  &none           &none            &none
->;};Taskbar {
+            >;
+            label = "Symbols";
+};Taskbar {
          bindings = <
-            display-name = "Taskbar";
 &none       &none       &none       &none       &none       &none  &none  &none       &none       &none       &none       &none
 &Taskbar_1  &Taskbar_2  &Taskbar_3  &Taskbar_4  &Taskbar_5  &none  &none  &Taskbar_6  &Taskbar_7  &Taskbar_8  &Taskbar_9  &Taskbar_10
 &none       &none       &none       &none       &none       &none  &none  &none       &none       &none       &none       &none
                         &none       &none       &none       &none  &none  &none       &none       &none
->;};Functions {
+            >;
+            label = "Taskbar";
+};Functions {
          bindings = <
-            display-name = "Functions";
 &none         &none         &none         &none         &none  &none  &none  &none  &kp F7  &kp F8  &kp F9  &kp F12
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none  &none  &none  &kp F4  &kp F5  &kp F6  &kp F11
 &none         &none         &none         &none         &none  &none  &none  &none  &kp F1  &kp F2  &kp F3  &kp F10
                             &none         &none         &none  &none  &none  &none  &none   &none
->;};
+            >;
+            label = "Functions";
+};
     };
 };
