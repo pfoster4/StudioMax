@@ -594,7 +594,7 @@ keymap {
             bindings = <
 &mt TAB B         &kp L  &kp D         &kp C      &kp V  &kp RIGHT  &kp RIGHT  &kp J  &kp F               &kp O          &kp U            &kp COMMA
 &mt LEFT_SHIFT N  &kp R  &kp T         &kp S      &kp G  &kp RIGHT  &kp RIGHT  &kp Y  &mt RIGHT_SHIFT H   &mt RCTRL A    &mt RIGHT_ALT E  &kp I
-&mt LCTRL X       &kp Q  &kp M         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp K  &kp SQT             &kp SQT        &kp SEMI         &mt SLASH DOT
+&mt LCTRL X       &kp Q  &kp M         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp K  &kp P               &kp SQT        &kp SEMI         &mt SLASH DOT
               &lt 2 ESCAPE  &kp ENTER  &mo 1  &trans     &trans     &mo 2  &kp SPACE  &kp BACKSPACE
             >;
         };
