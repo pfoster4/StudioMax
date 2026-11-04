@@ -113,7 +113,7 @@
 
         pin_combo {
             bindings = <&pin_macro>;
-            key-positions = <36 37 38 42 41 43>;
+            key-positions = <36 38 41 43>;
         };
 
         Caps {
@@ -560,6 +560,7 @@ keymap {
         };
 
         Symbols {
+            display-name = "Symbols";
             bindings = <
 &none  &none            &MoveUp_macro    &none                 &none  &none  &none  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
 &none  &MoveLeft_macro  &MoveDown_macro  &MoveRight_macro      &none  &none  &none  &kp PLUS        &kp DOLLAR       &kp PERCENT   &kp CARET             &kp COLON
@@ -569,6 +570,7 @@ keymap {
         };
 
         Taskbar {
+            display-name = "Taskbar";
             bindings = <
 &none       &none       &none       &none       &none       &none  &none  &none       &none       &none       &none       &none
 &Taskbar_1  &Taskbar_2  &Taskbar_3  &Taskbar_4  &Taskbar_5  &none  &none  &Taskbar_6  &Taskbar_7  &Taskbar_8  &Taskbar_9  &Taskbar_10
@@ -578,6 +580,7 @@ keymap {
         };
 
         Functions {
+            display-name = "Fun/BLE";
             bindings = <
 &none         &none         &none         &none         &none  &none  &none  &none  &kp F7  &kp F8  &kp F9  &kp F12
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none  &none  &none  &kp F4  &kp F5  &kp F6  &kp F11
@@ -587,10 +590,11 @@ keymap {
         };
 
         Gallium {
+            display-name = "Gallium";
             bindings = <
-&kp B  &kp L  &kp D         &kp C      &kp V  &kp RIGHT  &kp RIGHT  &kp J  &kp F      &kp O          &kp U    &kp COMMA
-&kp N  &kp R  &kp T         &kp S      &kp G  &kp RIGHT  &kp RIGHT  &kp Y  &kp H      &kp A          &kp E    &kp I
-&kp X  &kp Q  &kp M         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp K  &kp SQT    &kp SEMI       &kp DOT  &kp FSLH
+&mt TAB B         &kp L  &kp D         &kp C      &kp V  &kp RIGHT  &kp RIGHT  &kp J  &kp F               &kp O          &kp U            &kp COMMA
+&mt LEFT_SHIFT N  &kp R  &kp T         &kp S      &kp G  &kp RIGHT  &kp RIGHT  &kp Y  &mt RIGHT_SHIFT H   &mt RCTRL A    &mt RIGHT_ALT E  &kp I
+&mt LCTRL X       &kp Q  &kp M         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp K  &kp SQT             &kp SQT        &kp SEMI         &mt SLASH DOT
               &lt 2 ESCAPE  &kp ENTER  &mo 1  &trans     &trans     &mo 2  &kp SPACE  &kp BACKSPACE
             >;
         };
