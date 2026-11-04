@@ -204,15 +204,39 @@
             bindings = <&ACADE_TabEnter>;
             key-positions = <15 14>;
             layers = <1>;
-        };PinMacro {
-         bindings = <&pin_macro>;
-         key-positions = <36 37 38 41 42 43>;};CapsWord {
-         bindings = <&caps_word>;
-         key-positions = <15 12>;};TaskbarLayer {
-         bindings = <&sl 3>;
-         key-positions = <32 31>;};Functions {
-         bindings = <&sl 4>;
-         key-positions = <32 33>;};
+        };
+
+        PinMacro {
+            bindings = <&pin_macro>;
+            key-positions = <36 37 38 41 42 43>;
+        };
+
+        CapsWord {
+            bindings = <&caps_word>;
+            key-positions = <15 12>;
+        };
+
+        TaskbarLayer {
+            bindings = <&sl 3>;
+            key-positions = <32 31>;
+        };
+
+        Functions {
+            bindings = <&sl 4>;
+            key-positions = <32 33>;
+        };
+
+        Gallium {
+            bindings = <&to 5>;
+            key-positions = <11 23 35>;
+            layers = <0>;
+        };
+
+        QWERTY {
+            bindings = <&to 0>;
+            key-positions = <11 23 35>;
+            layers = <5>;
+        };
     };
 
     macros {
@@ -520,34 +544,55 @@ keymap {
 &mt LEFT_SHIFT A  &kp S  &kp D         &kp F      &kp G  &kp NUMBER_2  &kp NUMBER_6  &kp H  &mt RIGHT_SHIFT J  &mt RCTRL K    &mt RIGHT_ALT L  &kp SQT
 &mt LCTRL Z       &kp X  &kp C         &kp V      &kp B  &kp NUMBER_3  &kp NUMBER_7  &kp N  &kp M              &kp COMMA      &kp PERIOD       &kp SLASH
                          &lt 2 ESCAPE  &kp ENTER  &mo 1  &kp NUMBER_4  &kp NUMBER_8  &mo 2  &kp SPACE          &kp BACKSPACE
->;
+            >;
+
             sensor-bindings = <&inc_dec_kp A B &inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT &inc_dec_kp BACKSPACE DELETE &inc_dec_kp I J &inc_dec_kp UP DOWN &inc_dec_kp DOWN UP &inc_dec_kp BACKSPACE DELETE>;
         };
+
         Numbers {
             display-name = "Numbers";
-         bindings = <
+            bindings = <
 &kp PG_UP  &kp HOME  &kp UP           &kp END    &kp LC(V)  &none  &none  &kp LBKT       &kp N7        &kp N8      &kp N9  &kp RBKT
 &kp PG_DN  &kp LEFT  &kp DOWN         &kp RIGHT  &kp LC(X)  &none  &none  &kp EQUAL      &kp N4        &kp N5      &kp N6  &kp SEMI
 &kp LALT   &none     &Brackets_macro  &kp LG(V)  &kp LC(C)  &none  &none  &kp BSLH       &kp N1        &kp N2      &kp N3  &kp GRAVE
                      &none            &none      &none      &none  &none  &kp BACKSPACE  &kp NUMBER_0  &kp PERIOD
->;};Symbols {
-         bindings = <
+            >;
+        };
+
+        Symbols {
+            bindings = <
 &none  &none            &MoveUp_macro    &none                 &none  &none  &none  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
 &none  &MoveLeft_macro  &MoveDown_macro  &MoveRight_macro      &none  &none  &none  &kp PLUS        &kp DOLLAR       &kp PERCENT   &kp CARET             &kp COLON
 &none  &none            &none            &TextExtractor_macro  &none  &none  &none  &kp PIPE        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp TILDE
                         &none            &none                 &none  &none  &none  &none           &none            &none
->;};Taskbar {
-         bindings = <
+            >;
+        };
+
+        Taskbar {
+            bindings = <
 &none       &none       &none       &none       &none       &none  &none  &none       &none       &none       &none       &none
 &Taskbar_1  &Taskbar_2  &Taskbar_3  &Taskbar_4  &Taskbar_5  &none  &none  &Taskbar_6  &Taskbar_7  &Taskbar_8  &Taskbar_9  &Taskbar_10
 &none       &none       &none       &none       &none       &none  &none  &none       &none       &none       &none       &none
                         &none       &none       &none       &none  &none  &none       &none       &none
->;};Functions {
-         bindings = <
+            >;
+        };
+
+        Functions {
+            bindings = <
 &none         &none         &none         &none         &none  &none  &none  &none  &kp F7  &kp F8  &kp F9  &kp F12
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none  &none  &none  &kp F4  &kp F5  &kp F6  &kp F11
 &none         &none         &none         &none         &none  &none  &none  &none  &kp F1  &kp F2  &kp F3  &kp F10
                             &none         &none         &none  &none  &none  &none  &none   &none
->;};
+            >;
+        };
+
+        Gallium {
+            bindings = <
+&kp B  &kp L  &kp D         &kp C      &kp V  &kp RIGHT  &kp RIGHT  &kp J  &kp F      &kp O          &kp U    &kp COMMA
+&kp N  &kp R  &kp T         &kp S      &kp G  &kp RIGHT  &kp RIGHT  &kp Y  &kp H      &kp A          &kp E    &kp I
+&kp X  &kp Q  &kp M         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp K  &kp SQT    &kp SEMI       &kp DOT  &kp FSLH
+              &lt 2 ESCAPE  &kp ENTER  &mo 1  &trans     &trans     &mo 2  &kp SPACE  &kp BACKSPACE
+            >;
+        };
     };
 };
