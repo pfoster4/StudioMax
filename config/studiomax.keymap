@@ -763,7 +763,8 @@ keymap {
 &mt LEFT_SHIFT N  &kp R  &kp T         &kp S      &kp G  &kp RIGHT  &kp RIGHT  &kp Y  &mt RIGHT_SHIFT H  &mt RCTRL A       &mt RIGHT_ALT E  &kp I
 &mt LCTRL Q       &kp X  &kp M         &kp C      &kp V  &kp RIGHT  &kp RIGHT  &kp K  &kp P              &mt COMMA PERIOD  &kp MINUS        &kp FSLH
                          &lt 2 ESCAPE  &kp ENTER  &mo 1  &trans     &trans     &mo 2  &kp SPACE          &kp BACKSPACE
-
+            >;
         };
     };
 };
+
