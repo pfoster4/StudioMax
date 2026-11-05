@@ -722,7 +722,7 @@
 &mt TAB B         &kp L  &kp D         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp F  &kp O              &kp U             &kp J            &kp SEMI
 &mt LEFT_SHIFT N  &kp R  &kp T         &kp S      &kp G  &trans     &kp RIGHT  &kp Y  &mt RIGHT_SHIFT H  &mt RCTRL A       &mt RIGHT_ALT E  &kp I
 &mt LCTRL Q       &kp X  &kp M         &kp C      &kp V  &trans     &kp RIGHT  &kp K  &kp P              &mt COMMA PERIOD  &kp MINUS        &kp FSLH
-                         &lt 2 ESCAPE  &kp ENTER  &mo 1  &trans     &trans     &mo 2  &kp SPACE          &kp BACKSPACE
+                         &lt 3 ESCAPE  &kp ENTER  &mo 2  &trans     &trans     &mo 3  &kp SPACE          &kp BACKSPACE
             >;
         };
 
