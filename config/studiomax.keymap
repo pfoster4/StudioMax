@@ -66,103 +66,103 @@
         delete_combo2 {
             bindings = <&kp DELETE>;
             key-positions = <4 3>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         minus_combo {
             bindings = <&kp MINUS>;
             key-positions = <42 43>;
-            layers = <1>;
+            layers = <2>;
         };
 
         undo_combo {
             bindings = <&kp LC(Z)>;
             key-positions = <24 25>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         BackspaceWord_combo {
             bindings = <&lt 7 LC(BACKSPACE)>;
             key-positions = <28 27>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         delete_comb {
             bindings = <&lt 9 DELETE>;
             key-positions = <10 11>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         F5_combo {
             bindings = <&kp F5>;
             key-positions = <10 9>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         prtscn_combo {
             bindings = <&TextExtractor_macro>;
             key-positions = <7 8>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         underscore_combo {
             bindings = <&kp UNDERSCORE>;
             key-positions = <41 42>;
-            layers = <1>;
+            layers = <2>;
         };
 
         Caps {
             bindings = <&kp CAPS>;
             key-positions = <1 2>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         Delete {
             bindings = <&kp DELETE>;
             key-positions = <4 3>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         NewWindow_macro {
             bindings = <&NewWindow_macro>;
             key-positions = <2 16>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         Search {
             bindings = <&kp LC(E)>;
             key-positions = <3 2>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         SwitchWindows {
             bindings = <&kp LA(TAB)>;
             key-positions = <28 26>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         Paint {
             bindings = <&paint_macro>;
             key-positions = <7 19>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         InternalTabs {
             bindings = <&kp LC(TAB)>;
             key-positions = <28 27>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         CTRL_S {
             bindings = <&kp LC(S)>;
             key-positions = <0 1>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         REDO {
             bindings = <&kp LC(Y)>;
             key-positions = <12 13>;
-            layers = <0 1 5>;
+            layers = <0 1 2>;
         };
 
         CloseInternal {
@@ -178,19 +178,19 @@
         Windows {
             bindings = <&kp LEFT_WIN>;
             key-positions = <35 23>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         Alt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <35 34>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         CtrlAltDel {
             bindings = <&CtrlAltDel>;
             key-positions = <0 12 24>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         insert {
@@ -202,13 +202,13 @@
         TabEnter {
             bindings = <&ACADE_TabEnter>;
             key-positions = <15 14>;
-            layers = <1>;
+            layers = <2>;
         };
 
         PinMacro {
             bindings = <&pin_macro>;
             key-positions = <36 38 43 41>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         CapsWord {
@@ -217,43 +217,43 @@
         };
 
         TaskbarLayer {
-            bindings = <&sl 3>;
+            bindings = <&sl 4>;
             key-positions = <32 31>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         Functions {
-            bindings = <&sl 4>;
+            bindings = <&sl 5>;
             key-positions = <32 33>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         Gallium {
-            bindings = <&tog 5>;
+            bindings = <&to 1>;
             key-positions = <11 23 35>;
             layers = <0>;
         };
 
         QWERTY {
-            bindings = <&tog 0>;
+            bindings = <&to 0>;
             key-positions = <11 23 35>;
-            layers = <5>;
+            layers = <1>;
         };
 
         AllTabs {
             bindings = <&Switch_macro>;
             key-positions = <38 41>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
 
         Greenshot {
             bindings = <&Greenshot>;
             key-positions = <4 7>;
-            layers = <0 5>;
+            layers = <0 1>;
         };
     };
 
-     macros {
+    macros {
         pin_macro: pin_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -701,7 +701,7 @@
         };
     };
 
-keymap {
+    keymap {
         compatible = "zmk,keymap";
 
         Base {
@@ -710,10 +710,20 @@ keymap {
 &mt TAB Q         &kp W  &kp E         &kp R      &kp T  &kp NUMBER_1  &kp NUMBER_5  &kp Y  &kp U              &kp I          &kp O            &kp P
 &mt LEFT_SHIFT A  &kp S  &kp D         &kp F      &kp G  &kp NUMBER_2  &kp NUMBER_6  &kp H  &mt RIGHT_SHIFT J  &mt RCTRL K    &mt RIGHT_ALT L  &kp SQT
 &mt LCTRL Z       &kp X  &kp C         &kp V      &kp B  &kp NUMBER_3  &kp NUMBER_7  &kp N  &kp M              &kp COMMA      &kp PERIOD       &kp SLASH
-                         &lt 2 ESCAPE  &kp ENTER  &mo 1  &kp NUMBER_4  &kp NUMBER_8  &mo 2  &kp SPACE          &kp BACKSPACE
+                         &lt 3 ESCAPE  &kp ENTER  &mo 2  &kp NUMBER_4  &kp NUMBER_8  &mo 3  &kp SPACE          &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp A B &inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT &inc_dec_kp BACKSPACE DELETE &inc_dec_kp I J &inc_dec_kp UP DOWN &inc_dec_kp DOWN UP &inc_dec_kp BACKSPACE DELETE>;
+        };
+
+        Graphite {
+            display-name = "Graphite";
+            bindings = <
+&mt TAB B         &kp L  &kp D         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp F  &kp O              &kp U             &kp J            &kp SEMI
+&mt LEFT_SHIFT N  &kp R  &kp T         &kp S      &kp G  &trans     &kp RIGHT  &kp Y  &mt RIGHT_SHIFT H  &mt RCTRL A       &mt RIGHT_ALT E  &kp I
+&mt LCTRL Q       &kp X  &kp M         &kp C      &kp V  &trans     &kp RIGHT  &kp K  &kp P              &mt COMMA PERIOD  &kp MINUS        &kp FSLH
+                         &lt 2 ESCAPE  &kp ENTER  &mo 1  &trans     &trans     &mo 2  &kp SPACE          &kp BACKSPACE
+            >;
         };
 
         Numbers {
@@ -755,16 +765,7 @@ keymap {
                             &none         &none         &none  &none  &none  &none  &none   &none
             >;
         };
-
-        Graphite {
-            display-name = "Gallium";
-            bindings = <
-&mt TAB B         &kp L  &kp D         &kp W      &kp Z  &kp RIGHT  &kp RIGHT  &kp F  &kp O              &kp U             &kp J            &kp SEMI
-&mt LEFT_SHIFT N  &kp R  &kp T         &kp S      &kp G  &kp RIGHT  &kp RIGHT  &kp Y  &mt RIGHT_SHIFT H  &mt RCTRL A       &mt RIGHT_ALT E  &kp I
-&mt LCTRL Q       &kp X  &kp M         &kp C      &kp V  &kp RIGHT  &kp RIGHT  &kp K  &kp P              &mt COMMA PERIOD  &kp MINUS        &kp FSLH
-                         &lt 2 ESCAPE  &kp ENTER  &mo 1  &trans     &trans     &mo 2  &kp SPACE          &kp BACKSPACE
-            >;
-        };
     };
 };
+
 
